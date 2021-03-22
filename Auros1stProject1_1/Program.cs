@@ -27,11 +27,22 @@ namespace Auros1stProject1_1
             #region "SiO2 2nm_on_Si.dat" 로딩.
 
 
-            string[] MeasurementSpectrumData;   // 측정 스펙트럼 데이터 저장할 배열. (한 줄씩 저장)
+            List<string> MeasurementSpectrumData = new List<string>();   // 측정 스펙트럼 데이터 저장할 배열. (한 줄씩 저장)
             string[] SingleLineData;            // 한 줄의 스펙트럼 데이터를 임시로 저장할 배열.
-
+            
             // "SiO2 2nm_on_Si.dat" 파일 읽기. (한 줄씩)
-            MeasurementSpectrumData = File.ReadAllLines("SiO2 2nm_on_Si.dat");
+            MeasurementSpectrumData.AddRange(File.ReadAllLines("SiO2 2nm_on_Si.dat"));
+
+            // 무의미한 공백 행을 제거한다.
+            int lenSpectrumData = MeasurementSpectrumData.Count;
+            string Blank = "";
+            for (int i = 0; i < lenSpectrumData; i++)
+            {
+                if (MeasurementSpectrumData[i] == Blank)
+                    MeasurementSpectrumData.RemoveAt(i);
+                else
+                    break;
+            }
 
             // wavelength : 350 ~ 1000(nm)인 측정 스펙트럼 데이터를 담을 리스트 선언.
             List<double> wavelength = new List<double>();   // 파장 데이터 리스트.
@@ -42,7 +53,7 @@ namespace Auros1stProject1_1
             // 데이터의 첫번째 줄은 column 명이다.
             // 이를 제외하기 위해 반복문을 1부터 시작한다.
             int StartIndex = 1;
-            int LoopNum = MeasurementSpectrumData.Length;
+            int LoopNum = MeasurementSpectrumData.Count;
             for (int i = StartIndex; i < LoopNum; i++)
             {
                 // tsv 형식의 데이터를 SingleLineData에 저장한다.
