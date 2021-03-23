@@ -38,8 +38,8 @@ namespace Auros1stProject1_1
             string Blank = "";
             for (int i = 0; i < lenSpectrumData; i++)
             {
-                if (MeasurementSpectrumData[i] == Blank)
-                    MeasurementSpectrumData.RemoveAt(i);
+                if (MeasurementSpectrumData[0] == Blank)
+                    MeasurementSpectrumData.RemoveAt(0);
                 else
                     break;
             }
