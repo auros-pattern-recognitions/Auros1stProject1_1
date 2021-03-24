@@ -53,8 +53,8 @@ namespace Auros1stProject1_1
             // 데이터의 첫번째 줄은 column 명이다.
             // 이를 제외하기 위해 반복문을 1부터 시작한다.
             int StartIndex = 1;
-            int LoopNum = MeasurementSpectrumData.Count;
-            for (int i = StartIndex; i < LoopNum; i++)
+
+            for (int i = StartIndex; i < lenSpectrumData; i++)
             {
                 // tsv 형식의 데이터를 SingleLineData에 저장한다.
                 SingleLineData = MeasurementSpectrumData[i].Split((char)0x09);  // 0x09 : 수평 탭.
