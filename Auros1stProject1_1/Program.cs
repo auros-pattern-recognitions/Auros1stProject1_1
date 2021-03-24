@@ -27,8 +27,8 @@ namespace Auros1stProject1_1
             #region "SiO2 2nm_on_Si.dat" 로딩.
 
 
-            List<string> MeasurementSpectrumData = new List<string>();   // 측정 스펙트럼 데이터 저장할 배열. (한 줄씩 저장)
-            string[] SingleLineData;            // 한 줄의 스펙트럼 데이터를 임시로 저장할 배열.
+            List<string> MeasurementSpectrumData = new List<string>();  // 측정 스펙트럼 데이터 저장할 배열. (한 줄씩 저장)
+            string[] SingleLineData;                                    // 한 줄의 스펙트럼 데이터를 임시로 저장할 배열.
             
             // "SiO2 2nm_on_Si.dat" 파일 읽기. (한 줄씩)
             MeasurementSpectrumData.AddRange(File.ReadAllLines("SiO2 2nm_on_Si.dat"));
@@ -60,7 +60,7 @@ namespace Auros1stProject1_1
                 SingleLineData = MeasurementSpectrumData[i].Split((char)0x09);  // 0x09 : 수평 탭.
                 // 파장이 350 ~ 1000(nm) 이내인 데이터만 저장한다.
                 if (Convert.ToDouble(SingleLineData[0]) >= 350.0 &&
-                    Convert.ToDouble(SingleLineData[0]) <= 1000.0)
+                    Convert.ToDouble(SingleLineData[0]) <= 980.0)
                 {
                     // 각 컬럼에 해당하는 데이터를 저장한다.
                     wavelength.Add(Double.Parse(SingleLineData[0]));
