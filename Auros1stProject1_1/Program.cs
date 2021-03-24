@@ -18,7 +18,7 @@ namespace Auros1stProject1_1
         {
             //
             // "SiO2 2nm_on_Si.dat" 로딩. (tsv 형식)
-            // wavelength : 350 ~ 1000(nm) 이내의 데이터를 저장한다.
+            // wavelength : 350 ~ 980(nm) 이내의 데이터를 저장한다.
             //
             // 컬럼: wavelength(nm), AOI, Psi, Delta
             //
@@ -44,7 +44,7 @@ namespace Auros1stProject1_1
                     break;
             }
 
-            // wavelength : 350 ~ 1000(nm)인 측정 스펙트럼 데이터를 담을 리스트 선언.
+            // wavelength : 350 ~ 980(nm)인 측정 스펙트럼 데이터를 담을 리스트 선언.
             List<double> wavelength = new List<double>();   // 파장 데이터 리스트.
             List<double> AOI = new List<double>();          // 입사각 데이터 리스트.
             List<double> psi_alpha = new List<double>();    // Psi 데이터 리스트.
@@ -58,7 +58,7 @@ namespace Auros1stProject1_1
             {
                 // tsv 형식의 데이터를 SingleLineData에 저장한다.
                 SingleLineData = MeasurementSpectrumData[i].Split((char)0x09);  // 0x09 : 수평 탭.
-                // 파장이 350 ~ 1000(nm) 이내인 데이터만 저장한다.
+                // 파장이 350 ~ 980(nm) 이내인 데이터만 저장한다.
                 if (Convert.ToDouble(SingleLineData[0]) >= 350.0 &&
                     Convert.ToDouble(SingleLineData[0]) <= 980.0)
                 {
