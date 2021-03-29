@@ -101,7 +101,7 @@ namespace Auros1stProject1_1
             double PolarizerRadian = degree2radian(45.0);
 
             // psi, delta 데이터를 alpha, beta 로 변환한다.
-            LoopNum = wavelength.Count;
+            int LoopNum = wavelength.Count;
             for (int i = 0; i < LoopNum; i++)
             {
                 // psi, delta 값을 radian 으로 변환한다.
