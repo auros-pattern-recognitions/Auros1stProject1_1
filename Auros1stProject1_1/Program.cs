@@ -16,6 +16,11 @@ namespace Auros1stProject1_1
     {
         static void Main(string[] args)
         {
+            int im;
+            for (int i = 0; i < 5; i++)
+            {
+                WriteLine("ddd");
+            }
             //
             // "SiO2 2nm_on_Si.dat" 로딩. (tsv 형식)
             // wavelength : 350 ~ 980(nm) 이내의 데이터를 저장한다.
