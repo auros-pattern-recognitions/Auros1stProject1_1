@@ -21,6 +21,11 @@ namespace Auros1stProject1_1
             Console.WriteLine("도현이는 친절해");
             Console.WriteLine("도현이는 잘생겼어");
             Console.WriteLine("도현이 굿굿");
+
+            Console.WriteLine("도현이는 친절해");
+            Console.WriteLine("도현이는 잘생겼어");
+            Console.WriteLine("도현이 굿굿");
+
         }
     }
 }
