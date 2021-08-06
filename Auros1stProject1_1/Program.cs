@@ -20,6 +20,10 @@ namespace Auros1stProject1_1
             for (int i = 0; i < 5; i++)
             {
                 WriteLine("ddd");
+                WriteLine("ddd");
+                WriteLine("ddd");
+                WriteLine("ddd");
+                WriteLine("ddd");
             }
             //
             // "SiO2 2nm_on_Si.dat" 로딩. (tsv 형식)
