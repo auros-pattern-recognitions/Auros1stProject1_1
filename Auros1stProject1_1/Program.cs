@@ -16,11 +16,11 @@ namespace Auros1stProject1_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("지훈이형은 멍청이야");
-            Console.WriteLine("지훈이형은 똑똑해");
-            Console.WriteLine("지훈이형은 친절해");
-            Console.WriteLine("지훈이형은 잘생겼어");
-            Console.WriteLine("지훈이형굿굿");
+            Console.WriteLine("도현이는 멍청이야");
+            Console.WriteLine("도현이는 똑똑해");
+            Console.WriteLine("도현이는 친절해");
+            Console.WriteLine("도현이는 잘생겼어");
+            Console.WriteLine("도현이 굿굿");
         }
     }
 }
